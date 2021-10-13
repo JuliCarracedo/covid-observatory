@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import Home from './components/Home';
+import Details from './components/Details';
+import Navbar from './components/Navbar';
+import loadAsync from './redux/countries/api';
 
 function App() {
+  const dispatch = useDispatch();
+  const [download, setDownload] = useState('idle');
+  useEffect(() => {
+    if (download === 'idle') {
+      setDownload('done');
+      dispatch(loadAsync());
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/"><Home /></Route>
+        <Route path="/details"><Details /></Route>
+      </Switch>
+    </Router>
   );
 }
 
