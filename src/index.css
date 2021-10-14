@@ -9,6 +9,10 @@ body {
     color: whitesmoke;
 }
 
+html {
+    width: 100%;
+}
+
 nav {
      display: flex;
      flex-direction: row;
@@ -120,7 +124,6 @@ nav {
     height: 6rem;
     align-items: center;
     font-size: 20px;
-    padding: 10px
 }
 
 .region-card:nth-child(even) {
@@ -131,11 +134,16 @@ nav {
     background-color: rgb(180, 57, 125);
 }
 
+.region-title {
+    margin-left: 10px;
+}
+
 .count-container {
     display: flex;
     width: 10rem;
     justify-content: space-between;
     align-items: center;
+    margin-right: 10px;
 }
 
 .align-right {
