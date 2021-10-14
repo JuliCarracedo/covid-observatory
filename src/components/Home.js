@@ -1,55 +1,42 @@
-// import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import CountryCard from './CountryCard';
 
 const Home = () => {
   const data = useSelector((state) => state.countriesReducer);
-
-  const { globalCount } = data;
+  let globalCount = 0;
+  if (data.globalCount) {
+    globalCount = data.globalCount;
+  }
   return (
     <div id="home">
-      <section id="home-header">
-        <h1>Covid observatory</h1>
+      <div className="home-header">
+        <h2>Worldwide</h2>
         <p>
-          {' '}
           {globalCount}
-          {' '}
-          cases worldwide
         </p>
-      </section>
-
+      </div>
+      <p className="subtitle">
+        Covid-19 cases by country
+      </p>
       <div id="countries">
-        <Link to="/details">
-          {' '}
+        <div className="country-container">
           <CountryCard country="Spain" />
-          {' '}
-        </Link>
-        <Link to="/details">
-          {' '}
+        </div>
+        <div className="country-container">
           <CountryCard country="China" />
-          {' '}
-        </Link>
-        <Link to="/details">
-          {' '}
+        </div>
+        <div className="country-container">
           <CountryCard country="Italy" />
-          {' '}
-        </Link>
-        <Link to="/details">
-          {' '}
+        </div>
+        <div className="country-container">
           <CountryCard country="Argentina" />
-          {' '}
-        </Link>
-        <Link to="/details">
-          {' '}
+        </div>
+        <div className="country-container">
           <CountryCard country="United States" />
-          {' '}
-        </Link>
-        <Link to="/details">
-          {' '}
+        </div>
+        <div className="country-container">
           <CountryCard country="United Kingdom" />
-          {' '}
-        </Link>
+        </div>
       </div>
     </div>
   );

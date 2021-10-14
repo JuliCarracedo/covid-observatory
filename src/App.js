@@ -27,7 +27,13 @@ function App() {
       <Switch>
         <Route exact path="/">
           {!loading && <Home />}
-          {loading && <img alt="loading" src="https://c.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" />}
+          {loading && (
+          <div className="load-screen">
+            {' '}
+            <img id="loading" alt="loading" src="https://c.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" />
+            <h1>Retrieving Data</h1>
+          </div>
+          )}
         </Route>
         <Route path="/details"><Details /></Route>
       </Switch>
