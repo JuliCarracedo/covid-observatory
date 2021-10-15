@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "jest-fetch-mock": "^3.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
@@ -64,6 +65,7 @@
     "moduleNameMapper": {
       "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/node_modules/jest-css-modules",
       "\\.(css|less)$": "<rootDir>/node_modules/jest-css-modules"
-    }
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test/reducerTests/integrations.test.js"
   }
 }

@@ -1,8 +1,7 @@
-import './App.css';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch, Route } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
 import Home from './components/Home';
 import Details from './components/Details';
 import Navbar from './components/Navbar';

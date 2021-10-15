@@ -70,8 +70,7 @@ const countriesReducer = (state = initialState, action) => {
     case GET_ITALY: return { ...state, italyCount: action.italyCount };
     case GET_SPAIN: return { ...state, spainCount: action.spainCount };
     case GET_UK: return { ...state, ukCount: action.ukCount };
-    case GET_USA: console.log('us triggers');
-      return { ...state, usaCount: action.usaCount };
+    case GET_USA: return { ...state, usaCount: action.usaCount };
     default: return state;
   }
 };
