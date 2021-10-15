@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Video presentation [here](https://www.loom.com/share/66e7981f5cd143bb92b3766f13409b53)
 
 ## Built With
 
