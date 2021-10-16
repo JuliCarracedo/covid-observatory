@@ -2,75 +2,70 @@
 
 # Project Name
 
-> One paragraph statement about the project.
+>Check Covid confirmed cases worldwide and for 6 different countries for 2020/09/01 in a beautiful presentation.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./src/app_screenshot.png)
 
 Video presentation [here](https://www.loom.com/share/66e7981f5cd143bb92b3766f13409b53)
 
 ## Built With
 
 - Major languages
+    - JavaScript
+    - HTML & CSS
 - Frameworks
+    - React & Redux
+    - Jest
 - Technologies used
+    - Yarn
+    - VSCode
+    - Git & GitHub
 
 ## Live Demo
 
 [Live Demo Link](hhttps://admiring-joliot-9f476a.netlify.app/)
 
 
+
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Have Git bash installed
+- Have a code editor
+- Have Yarn installed
 
 ### Setup
 
-### Install
+- On any folder, use your Git Bash to clone the repository: ```git clone https://github.com/JuliCarracedo/covid-observatory.git```
+- Open the created folder with your code editor
+- On your editor's command line run ```yarn install```
 
 ### Usage
 
+- On your editor's command line run ```yarn start```
+- Now you can visualize data on covid confirmed cases for each of the six available countries
+- Use the filter to shrink your data to a required size
+
 ### Run tests
 
-### Deployment
+- On your editor's command line run ```yarn test```
 
-
-
-## Authors
+## Author
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@JuliCarracedo](https://github.com/JuliCarracedo)
+- Twitter: [@CarracedoTrigo](https://twitter.com/CarracedoTrigo)
+- LinkedIn: [Julian Carracedo](https://linkedin.com/in/julian-carracedo)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
