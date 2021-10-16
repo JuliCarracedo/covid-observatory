@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useFilter } from '../redux/countries/countries';
 
 const Navbar = () => {
-  const filter = useSelector((state) => state.countriesReducer.filter);
+  const filter = useSelector((state) => state.countriesReducer.filter) || 'worldwide';
   const dispatch = useDispatch();
   const handleHome = (e) => {
     e.stopPropagation();

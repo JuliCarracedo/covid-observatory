@@ -10,6 +10,9 @@ import apiData, {
   apiDataArg, apiDataChina, apiDataSpain, apiDataUk, apiDataUs,
 } from './apidata';
 import 'regenerator-runtime/runtime';
+import Navbar from '../../components/Navbar';
+import Home from '../../components/Home';
+import Details from '../../components/Details';
 
 global.fetch = fetchMock;
 describe('Integrations test', () => {
@@ -27,6 +30,36 @@ describe('Integrations test', () => {
       <Provider store={store}>
         <Router>
           <App />
+        </Router>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot;
+  });
+  test('Navbar matches snapshot', () => {
+    const { tree } = renderer.create(
+      <Provider store={store}>
+        <Router>
+          <Navbar />
+        </Router>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot;
+  });
+  test('Home matches snapshot', () => {
+    const { tree } = renderer.create(
+      <Provider store={store}>
+        <Router>
+          <Home />
+        </Router>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot;
+  });
+  test('Details matches snapshot', () => {
+    const { tree } = renderer.create(
+      <Provider store={store}>
+        <Router>
+          <Details />
         </Router>
       </Provider>,
     );
