@@ -60,6 +60,8 @@ nav {
   background-color: rgb(201, 65, 140);
   font-size: 16px;
   margin: 0;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .countryCard,
@@ -79,19 +81,34 @@ nav {
   justify-content: space-between;
 }
 
-.country-container:nth-child(even) {
+.country-container:nth-child(1) {
   background-color: rgb(160, 50, 111);
 }
 
-.country-container:nth-child(odd) {
+.country-container:nth-child(2) {
+  background-color: rgb(180, 57, 125);
+}
+
+.country-container:nth-child(3) {
+  background-color: rgb(180, 57, 125);
+}
+
+.country-container:nth-child(4) {
+  background-color: rgb(160, 50, 111);
+}
+
+.country-container:nth-child(5) {
+  background-color: rgb(160, 50, 111);
+}
+
+.country-container:nth-child(6) {
   background-color: rgb(180, 57, 125);
 }
 
 #countries {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  height: 36rem;
   flex-wrap: wrap;
 }
 
@@ -155,4 +172,15 @@ nav {
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+}
+
+#select-filter {
+  font-size: 20px;
+  width: 50%;
+  color: whitesmoke;
+  background-color: rgb(180, 57, 125);
+  border: rgb(160, 50, 111) 2px solid;
+
+  border-radius: 4px;
+  padding: 5px 20px 5px 20px;
 }

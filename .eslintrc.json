@@ -24,5 +24,13 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ]
+  ],
+  "overrides": [
+    {
+        "files": ["*.test.js", "*.spec.js"],
+        "rules": {
+            "no-unused-expressions": "off"
+        }
+    }
+]
 }

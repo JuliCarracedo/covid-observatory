@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -30,7 +29,7 @@ const CountryCard = (props) => {
           break;
         case 'United Kingdom': count = useSelector((state) => state.countriesReducer).ukCount.total;
           break;
-        default: 'Unknown'; break;
+        default: count = 0; break;
       }
     }
   }

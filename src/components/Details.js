@@ -1,9 +1,9 @@
-/* eslint-disable no-unused-expressions */
 import { useSelector } from 'react-redux';
 import React from 'react';
 
 const Details = () => {
   const { loading, filter } = useSelector((state) => state.countriesReducer);
+
   let regions = [];
   let total = 0;
   if (!loading) {
@@ -27,7 +27,7 @@ const Details = () => {
         case 'United Kingdom': regions = useSelector((state) => state.countriesReducer).ukCount.regions;
           total = useSelector((state) => state.countriesReducer).ukCount.total;
           break;
-        default: 'Unknown'; break;
+        default: total = 0; break;
       }
     }
   }
@@ -39,7 +39,7 @@ const Details = () => {
         </h2>
         <p>{total}</p>
       </div>
-      <p className="subtitle">Covid-19 cases by region</p>
+      <p className="subtitle" defaultValue="default">Covid-19 cases by region</p>
       {regions.map((region) => (
         <div className="region-card" key={region.name}>
           <h3 className="region-title">{region.name}</h3>

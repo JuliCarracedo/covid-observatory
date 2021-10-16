@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
-import React from 'react';
-import CountryCard from './CountryCard';
+import React, { useState } from 'react';
+import Filter from './Filter';
 
 const Home = () => {
   const data = useSelector((state) => state.countriesReducer);
   let globalCount = 0;
+  const [filter, setFilter] = useState('default');
   if (data.globalCount) {
     globalCount = data.globalCount;
   }
@@ -19,26 +20,21 @@ const Home = () => {
       <p className="subtitle">
         Covid-19 cases by country
       </p>
-      <div id="countries">
-        <div className="country-container">
-          <CountryCard country="Spain" />
-        </div>
-        <div className="country-container">
-          <CountryCard country="China" />
-        </div>
-        <div className="country-container">
-          <CountryCard country="Italy" />
-        </div>
-        <div className="country-container">
-          <CountryCard country="Argentina" />
-        </div>
-        <div className="country-container">
-          <CountryCard country="United States" />
-        </div>
-        <div className="country-container">
-          <CountryCard country="United Kingdom" />
-        </div>
+      <div className="subtitle">
+        <select id="select-filter" defaultValue="default" onChange={(e) => setFilter(e.target.value)}>
+          <option value="default" disabled>Choose a filter</option>
+          <option value="by-continent" disabled>By continent</option>
+          <option value="all">All continents</option>
+          <option value="asia">Asia</option>
+          <option value="america">America</option>
+          <option value="europe">Europe</option>
+          <option value="by-language" disabled>By language</option>
+          <option value="spanish">Spanish</option>
+          <option value="english">English</option>
+          <option value="other">Other languages</option>
+        </select>
       </div>
+      <Filter filter={filter} />
     </div>
   );
 };
